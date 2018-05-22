@@ -1,3 +1,70 @@
 # HTMLOverlay
 
 to learn how to create overlay using CSS and Javascript
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.text {
+	background-color: white;
+	color: black;
+	font-size: 5vw; /* Responsive font size */
+	padding: 16px 32px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+	<!-- Trigger/Open The Modal -->
+	<button id="myBtn">Show</button>
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<!-- Make sure the text in center -->
+			<div class="text" align="center">This is a new layer, the
+				button cannot be clicked anymore</div>
+		</div>
+	</div>
+	<script>
+		// Get the modal
+		var modal = document.getElementById('myModal');
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() {
+			modal.style.display = "block";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+</body>
+</html>
